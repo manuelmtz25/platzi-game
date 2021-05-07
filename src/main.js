@@ -17,5 +17,16 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  methods: {
+    // Nuestra función
+    init () {
+      console.log('Hola 🌝')
+      // store.dispatch('oauth/getToken', null, { root: true })
+    }
+  },
+  // Hook created
+  created () {
+    this.init()
+  },
   render: h => h(App)
 }).$mount('#app')
